@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    IMAGE = "yourdockerhubuser/sample-app"
+    IMAGE = "jose22an/sample-app"
   }
   stages {
     stage('Checkout') {
