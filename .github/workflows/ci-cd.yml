@@ -16,10 +16,10 @@ jobs:
         run: docker run --rm sample-app:ci npm test || true
       # Optionally push to Docker Hub (set DOCKERHUB_USERNAME, DOCKERHUB_TOKEN in repo secrets)
       - name: Login to Docker Hub
-        if: secrets.DOCKERHUB_USERNAME
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
       - name: Push image
-        if: secrets.DOCKERHUB_USERNAME
         run: |
           docker tag sample-app:ci jose22an/sample-app:latest
           docker push jose22an/sample-app:latest
+
