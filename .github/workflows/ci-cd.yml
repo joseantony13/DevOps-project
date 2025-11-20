@@ -7,18 +7,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: docker:dind
+        privileged: true
+
     steps:
       - uses: actions/checkout@v4
-      - name: Build Docker image
-        run: |
-          docker build -t sample-app:ci ./app
-      - name: Run tests
-        run: docker run --rm sample-app:ci npm test || true
-      # Optionally push to Docker Hub (set DOCKERHUB_USERNAME, DOCKERHUB_TOKEN in repo secrets)
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
-      - name: Push image
+      - name: Build Docker image
+        run: |
+          docker build -t sample-app:ci ./app
+
+      - name: Run tests
+        run: docker run --rm sample-app:ci npm test || true
+
+      - name: Push Docker image
         run: |
           docker tag sample-app:ci jose22an/sample-app:latest
           docker push jose22an/sample-app:latest
