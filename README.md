@@ -1,4 +1,4 @@
-# 🚀 DevOps Project – Local Setup (No Cloud)
+# DevOps Project – Local Setup (No Cloud)
 
 This repository contains a **comprehensive DevOps project** implemented entirely in a **local environment**, focusing on real-world DevOps workflows and toolchain integration **without using any cloud platforms**.
 
@@ -6,7 +6,7 @@ The project was developed and tested using **WSL (Windows Subsystem for Linux) v
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates how modern DevOps practices can be implemented in a **local setup**, covering the complete lifecycle from **code commit to deployment, monitoring, and incident analysis**.
 
@@ -20,14 +20,14 @@ The primary focus areas include:
 
 ---
 
-## 🛠️ Environment & Tools
+## Environment & Tools
 
-### 🔹 Environment
+### Environment
 - **Operating System:** Windows  
 - **Linux Runtime:** WSL (via PowerShell)  
 - **Container Runtime:** Docker  
 
-### 🔹 Tools & Technologies
+### Tools & Technologies
 - Git & GitHub  
 - Jenkins  
 - Docker  
@@ -43,7 +43,7 @@ The primary focus areas include:
 
 ---
 
-## 🔄 CI/CD & Automation
+## CI/CD & Automation
 
 - Implemented **CI pipelines using Jenkins** for automated build, test, and Docker image creation  
 - Built **CI workflows with GitHub Actions** for application build and deployment  
@@ -52,7 +52,7 @@ The primary focus areas include:
 
 ---
 
-## ☸️ Container Orchestration (Kubernetes)
+## Container Orchestration (Kubernetes)
 
 - Dockerized application deployed on a **local Kubernetes cluster**  
 - Kubernetes manifests created for:
@@ -63,7 +63,7 @@ The primary focus areas include:
 
 ---
 
-## 🔁 GitOps Workflow
+## GitOps Workflow
 
 - Implemented **GitOps-based continuous delivery** using Argo CD  
 - Kubernetes manifests stored and versioned in GitHub  
@@ -72,7 +72,7 @@ The primary focus areas include:
 
 ---
 
-## ⚙️ Infrastructure Automation
+## Infrastructure Automation
 
 - Used **Docker Compose** to provision multiple services locally:
   - Jenkins  
@@ -84,7 +84,7 @@ The primary focus areas include:
 
 ---
 
-## 📊 Monitoring & Observability
+## Monitoring & Observability
 
 - Configured **Prometheus** to collect metrics from containerized applications  
 - Integrated **Grafana** for metrics visualization  
@@ -93,7 +93,7 @@ The primary focus areas include:
 
 ---
 
-## 🚨 Debugging & Root Cause Analysis
+## Debugging & Root Cause Analysis
 
 - Simulated application failures in a local environment  
 - Collected and analyzed logs to identify issues  
@@ -102,7 +102,7 @@ The primary focus areas include:
 
 ---
 
-## 📂 Project Structure (Sample)
+## Project Structure (Sample)
 
 ```bash
 .
